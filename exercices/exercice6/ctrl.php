@@ -6,11 +6,13 @@ class Ctrl
   public function __construct()
   {
     $this->wrk = new Wrk();
+    
   }
 
   public function getEquipes()
   {
-    return $wrk->getEquipesFromDB();
+    
+    return $this->wrk->getEquipesFromDB();
   }
 }
 
