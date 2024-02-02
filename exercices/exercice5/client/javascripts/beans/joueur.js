@@ -26,7 +26,9 @@ Joueur.prototype.setNom = function(nom) {
 Joueur.prototype.setPoints = function(points) {
   this.points = points;
 };
-
+Joueur.prototype.setPk = function(pk) {
+  this.pk = pk;
+};
 /**
  * Retourne le pays en format texte
  * @returns Le pays en format texte

@@ -5,7 +5,7 @@
  * @version 1.0 / 20-SEP-2013
  */
 
-var BASE_URL = "METTEZ L'URL D'ADRESSE DU PHP DU SERVEUR";
+var BASE_URL = "http://localhost:8081/joueurs.php";
 
 /**
  * Fonction permettant de charger les données d'équipe.
@@ -13,6 +13,7 @@ var BASE_URL = "METTEZ L'URL D'ADRESSE DU PHP DU SERVEUR";
  * @param {type} Fonction de callback en cas d'erreur.
  */
 function chargerTeam(successCallback, errorCallback) {
+    
     $.ajax({
         type: "GET",
         dataType: "xml",
@@ -21,6 +22,7 @@ function chargerTeam(successCallback, errorCallback) {
         success: successCallback,
         error: errorCallback
     });
+    
 }
 
 

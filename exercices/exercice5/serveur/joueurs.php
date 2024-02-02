@@ -41,5 +41,4 @@ if($_GET['action'] == "joueur")
 	}
 	echo '</joueurs>';
 }
-
 ?>
