@@ -24,7 +24,7 @@ https://openclassrooms.com/fr/courses/1665806-programmez-en-oriente-objet-en-php
 	{
 	        private $nom;
 	        public $numero;
-	        public function construct($nom, $numero)
+	        public function __construct($nom, $numero) //ajout de __ devant le construct
 	        {
 	                $this->nom = $nom;
 	                $this->numero = $numero;
@@ -40,15 +40,16 @@ https://openclassrooms.com/fr/courses/1665806-programmez-en-oriente-objet-en-php
 Le code suivant utilise cette classe :
 
 ```php
-	<?php
-	include_once('Membre')
-	
-	$membre = new Membre('paul');
-	$Nom = $membre.getNom();
-	$Numero = $membre.$numero;
-	
-	echo 'Un nouveau membre! Nom: ' $nom ', son âge: ' .$numero. '.';
-	?>
+<?php
+	include_once('Membre.php'); // Ajout de l'extension ".php" et correction du point-virgule
+
+	$membre = new Membre('Paul', 25); // Ajout d'un deuxième argument pour le numéro
+	$nom = $membre->getNom(); // Utilisation de la flèche "->" pour accéder à la méthode
+	$numero = $membre->numero; // Utilisation de la flèche "->" pour accéder à la propriété
+
+	echo 'Un nouveau membre! Nom: ' . $nom . ', son âge: ' . $numero . '.'; // Utilisation de la concaténation avec le point (.) et ajout de guillemets autour de $nom
+?>
+
 ```
 Il y a malheureusement des erreurs dans ces deux extraits de code. Corrigez Ces erreurs (mettez-les en rouge pour vous en souvenir).
  
