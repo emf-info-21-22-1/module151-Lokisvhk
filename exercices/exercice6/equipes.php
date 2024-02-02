@@ -14,6 +14,7 @@
       </tr>
       <?php
       require('ctrl.php');
+      $ctrl= new Ctrl();
       $equipes = getEquipes();
       $id = 1; // Initialise l'ID à 1
       foreach ($equipes as $equipe) {
