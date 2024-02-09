@@ -1,10 +1,11 @@
 # Projet
 Repository du projet personnel du module 151
 
-## Titre du projet
+## Meylan's site
 
 ### Description du projet
-Votre descriptif du cahier des charges ici
+Notre projet se trouve au repo suivant : "https://github.com/Lokisvhk/ClaudeMeylanSite.git" </br>
+Vous diposez d'une invitation pour avoire accès à ce dernier en read-only, enfaite en read and writ par ce que on est pas sur un repo d'organisation. On vous fais confiance !
 
 ### Arborescence
 - L'analyse et les différents tests technos sont effectués dans /exercices
