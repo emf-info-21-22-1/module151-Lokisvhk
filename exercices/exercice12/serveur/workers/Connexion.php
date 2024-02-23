@@ -1,5 +1,7 @@
 <?php
 include_once('configConnexion.php');
+
+
 class Connection {
 	private $pdo;
 	
@@ -47,6 +49,22 @@ class Connection {
             print "Erreur !: " . $e->getMessage() . "<br/>";
             die();
 			return false;
+        }
+    }
+    /**
+     * Fonction permettant d'exécuter une requête préparée.
+     *
+     * @param String $query Requête SQL avec placeholders
+     * @param Array $params Paramètres à lier à la requête
+     * @return bool true si la requête a été exécutée avec succès, sinon false
+     */
+    public function prepareAndExecute($query, $params) {
+        try {
+            $stmt = $this->pdo->prepare($query);
+            return $stmt->execute($params);
+        } catch (PDOException $e) {
+            print "Erreur !: " . $e->getMessage() . "<br/>";
+            die();
         }
     }
 
